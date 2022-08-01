@@ -1,181 +1,178 @@
-.footer {
-  background-color: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  & .container {
-    display: flex;
-    align-items: baseline;
-  }
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2f303a;
 }
 
+.page-footer__container {
+    @media screen and (max-width: $desktop-max) {
+        text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: baseline;
+    }
+
+}
+
+.page-footer__contacts {
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width: $desktop-max) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: inline-block;
+        margin-right: 70px;
+    }
+}
+
+.page-footer__subtitle {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: $primary-letter-spacing;
+    text-transform: uppercase;
+    color: getColorText('text-white');
+}
+
+.pade-footer__tablet-container {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop-max) {
+        justify-content: space-around;
+    }
+
+    @media screen and (max-width: $desktop-max) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
+}
+
+// Адрес студии
 .address {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #ffffff;
-  margin-top: 20px;
+    margin-top: 20px;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    color: getColorText(text-white);
 }
 
-.address-color {
-  color: #ffffff;
-  transition: color var(--animation-transition);
+.address__text {
+    margin-bottom: 9px;
 
-  &:hover,
-  &:focus {
-    color: var(--hover-cont-link);
-  }
+    letter-spacing: $primary-letter-spacing;
 }
 
-.footer-item+.footer-item {
-  margin-top: 9px;
+.address__item:not(:first-child) {
+     margin-top: 9px;
 }
 
-.footer-contacts {
-  color: var(--communication-color);
-  transition: color var(--animation-transition);
+.address__contacts {
+    letter-spacing: $primary-letter-spacing;
+    color: getColorText('communication');
 
-  &:hover,
-  &:focus {
-    color: var(--hover-cont-link);
-  }
+    transition: color $animation-transition;
+
+    &:hover,
+    &:focus {
+        color: getColorText('hover');
+    }
 }
 
-.primary-fsection {
-  min-width: 231px;
+/* Социальные сети футера */
+.page-footer__list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
-.second-fsection {
-  margin-left: 70px;
+.page-footer__item:not(:last-child) {
+    margin-right: 10px;
 }
 
-.footer-title {
-  font-family: var(--primary-font);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: var(--primary-letter-spacing);
-  text-transform: uppercase;
-  color: var(--footer-title);
-  margin-bottom: 20px;
-}
+.page-footer__socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: getFill('white-fill');
 
-.footer-social {
-  display: flex;
-}
+    transition: background-color $animation-transition;
 
-.fsocial-list:nth-child(n + 2) {
-  margin-left: 10px;
-}
-
-.fsocial-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: background var(--animation-transition);
-
-  &:hover,
-  &:focus {
-    background: var(--fsocial-link-hover);
-  }
-}
-
-.fsocial-icon {
-  fill: var(--fsocial-icon-color);
+    &:hover,
+    &:focus {
+        background-color: getBgc('bgc-blue');
+    }
 }
 
 /* Footer Форма подписки */
+.page-footer__field {
+    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-.container-subscription {
-  margin-left: 93px;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
-.form-title {
-  margin-bottom: 20px;
+.page-footer__field-email {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    /* identical to box height, or 125% */
+    letter-spacing: 0.03em;
 
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: var(--primary-letter-spacing);
-  color: var(--text-color-white);
+    height: 50px;
+    padding-left: 16px;
+
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    @media screen and (max-width: $desktop-max) {
+        max-width: 450px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+    }
+}
+.page-footer__btn {
+    padding-top: 10px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    padding-left: 29px;
+
+    @media screen and (max-width: $desktop-max) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+    }
 }
 
-.footer-form {
-  display: flex;
-}
-
-.footer-email-input {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-
-  width: 358px;
-  padding-left: 16px;
-
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  border-radius: 4px;
-}
-
-.footer-btn-subscrib {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 12px;
-  min-width: 200px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--button-text-color);
-  background-color: var(--blue-bgc);
-}
-
-.footer-form {
-  display: flex;
-}
-
-.footer-email-input {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-
-  width: 358px;
-  padding-left: 16px;
-
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  border-radius: 4px;
-
-  &:focus {
-    border: 1px solid var(--blue-bgc);
-  }
-}
-
-.icon-subscribe {
-  margin-left: 10px;
-  fill: var(--fsocial-link-fill);
+.page-footer__icon {
+    margin-left: 10px;
+    fill: getFill('white-fill');
 }
