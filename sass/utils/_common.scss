@@ -5,11 +5,19 @@ body {
     line-height: 1.14;
     color: getColorText('primary');
 }
+
 body.modal-open {
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
     margin: 0;
     padding: 0;
 }
@@ -30,6 +38,11 @@ img {
 
 textarea {
     resize: none;
+}
+
+input,
+textarea {
+    outline: none;
 }
 
 /* Общие стили */
@@ -84,11 +97,13 @@ textarea {
 }
 
 .section {
-    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
+
+    @media screen and (max-width: $mobile-max),
+    (min-width: $mobile) {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-      
+
     @media screen and (min-width: 1200px) {
         padding-top: 94px;
         padding-bottom: 94px;

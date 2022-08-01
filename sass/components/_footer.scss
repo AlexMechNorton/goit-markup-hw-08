@@ -8,6 +8,7 @@
     @media screen and (max-width: $desktop-max) {
         text-align: center;
     }
+
     @media screen and (min-width: $desktop) {
         display: flex;
         align-items: baseline;
@@ -19,6 +20,7 @@
     @media screen and (max-width: $tablet-max) {
         margin-bottom: 60px;
     }
+
     @media screen and (max-width: $desktop-max) {
         text-align: center;
     }
@@ -72,10 +74,16 @@
     margin-bottom: 9px;
 
     letter-spacing: $primary-letter-spacing;
+    color: getColorText(text-white);
+
+    &:hover,
+    &:focus {
+        color: getColorText('hover');
+    }
 }
 
 .address__item:not(:first-child) {
-     margin-top: 9px;
+    margin-top: 9px;
 }
 
 .address__contacts {
@@ -121,7 +129,9 @@
 
 /* Footer Форма подписки */
 .page-footer__field {
-    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
+
+    @media screen and (max-width: $mobile-max),
+    (min-width: $mobile) {
         margin-right: auto;
         margin-left: auto;
     }
@@ -146,6 +156,10 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 
+    &:focus {
+        border: 1px solid getBgc('bgc-blue');
+    }
+
     @media screen and (max-width: $desktop-max) {
         max-width: 450px;
         width: 100%;
@@ -156,6 +170,7 @@
         width: 358px;
     }
 }
+
 .page-footer__btn {
     padding-top: 10px;
     padding-right: 28px;
