@@ -5,6 +5,7 @@
   text-align: center;
   letter-spacing: var(--primary-letter-spacing);
 }
+
 .button {
   font-family: inherit;
   cursor: pointer;
@@ -13,16 +14,40 @@
   color: var(--button-text-color);
   background-color: var(--blue-bgc);
 }
+
 .container {
+  outline: 3px solid salmon;
   width: 1200px;
   margin: 0 auto;
 
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: $desktop;
+  }
 }
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+
+  @media screen and (max-width: $mobile-max),
+  (min-width: $mobile) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* Скрытый заголовок h2 */

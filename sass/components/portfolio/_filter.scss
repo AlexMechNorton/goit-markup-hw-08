@@ -1,12 +1,35 @@
 .filter {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
+  align-items: baseline;
+
+
+  @media screen and (max-width: $tablet-max) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
+
+// .filter__item:not(:nth-child(n + 4)) {
+//   @media screen and (max-width: $tablet-max) {
+//     margin-bottom: 15px;
+//   }
+// }
 
 .filter__item+.filter__item {
   margin-left: 8px;
+
+  @media screen and (max-width: $tablet-max) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__button {
