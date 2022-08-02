@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 10;
 
     transition: opacity $animation-transition, visibility $animation-transition;
 
@@ -29,14 +30,14 @@
     padding: 40px;
 
     max-width: 450px;
-    max-height: 100%;
+    // max-height: 100%;
     width: 100%;
 
     background-color: getBgc('primary-white');
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    
+
     @media screen and (min-width: $mobile) {
         position: absolute;
         top: 50%;
@@ -70,6 +71,7 @@
         fill: getFill('blue-fill');
     }
 }
+
 /* Форма в модальном окне для Заказа услуг */
 .order__form {
     display: flex;
@@ -90,11 +92,13 @@
         line-height: 1.15;
     }
 }
+
 /* Стилизация для lable */
 .order__label {
     display: block;
     margin-bottom: 4px;
 }
+
 .order__field-text {
     display: block;
     padding-top: 11px;
@@ -111,7 +115,7 @@
     &:not(:last-child) {
         padding-left: 42px;
     }
-    
+
     &:focus {
         border: 1px solid getColorText('hover');
     }
@@ -189,7 +193,7 @@
     margin-right: 5px;
 
     transition: border-color $animation-transition, background-color $animation-transition,
-    background-image $animation-transition;
+        background-image $animation-transition;
 }
 
 .order__text-checkbox {
@@ -202,6 +206,7 @@
     text-decoration: underline;
     color: getColorText('hover');
 }
+
 // Кнопка Отправить
 .order__btn {
     max-width: 200px;
