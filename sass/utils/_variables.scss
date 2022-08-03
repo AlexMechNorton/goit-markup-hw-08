@@ -1,14 +1,17 @@
 @function getColorText($key) {
     @return map-get($color-text, $key);
 }
+
 @function getBgc($key) {
     @return map-get($bgc, $key);
 }
+
 @function getFill($key) {
     @return map-get($fill, $key);
 }
 
-$color-text: ('primary': #757575,
+$color-text: (
+    'primary': #757575,
     'text-black': #212121,
     'title': #212121,
     'text-white': #ffffff,
@@ -18,15 +21,17 @@ $color-text: ('primary': #757575,
 
 );
 
-$bgc: ('backdrop': rgba(0, 0, 0, 0.2),
+$bgc: (
+    'backdrop': rgba(0, 0, 0, 0.2),
     'primary-white': #ffffff,
     'bgc-blue': #2196f3,
     'portfolio-hover': rgba(33, 150, 243, 0.9),
     'button-hover': #188CE8,
 );
 
-$fill: ('primary-fill': #afb1b8,
-    'social-fill': #757575,
+$fill: (
+    'primary-fill': #afb1b8,
+    'social-fill': #AFB1B8,
     'white-fill': #ffffff,
     'blue-fill': #2196f3,
 );
