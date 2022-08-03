@@ -188,6 +188,7 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: fixed;
     height: 100vh;
   }
 }
